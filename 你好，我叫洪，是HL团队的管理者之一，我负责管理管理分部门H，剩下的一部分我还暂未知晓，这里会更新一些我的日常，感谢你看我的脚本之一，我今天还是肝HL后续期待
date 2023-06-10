@@ -756,6 +756,28 @@ shadow.Parent = game.Players.LocalPlayer.Backpack
 
 Tab:AddButton({
 
+	Name = "圣诞枪",	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/NotTypicalAdmin/ChristmasGuns/main/main"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "蜡烛",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
 	Name = "吸铁石",
 
 	Callback = function()
@@ -1022,7 +1044,7 @@ local EnabledEntities={
 
 Tab:AddToggle({
 
-    Name = "Screech伤害",
+    Name = "Screech无伤害",
 
 	CurrentValue = false,
 
@@ -1786,7 +1808,7 @@ Tab:AddButton({
 
 })
 
-Tab:CreateButton({
+Tab:AddButton({
 
     Name = "Screech",
 
@@ -2076,3 +2098,188 @@ Tab:AddButton({
 
     end
 
+Tab:AddButton({
+
+    Name = "A-60", 
+
+    Callback = function ()
+
+        local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+
+local entity = Creator.createEntity({
+
+    CustomName = "A-60", -- Custom name of your entity
+
+    Model = "https://github.com/plamen6789/CustomDoorsMonsters/blob/main/A-60.rbxm?raw=true", -- Can be GitHub file or rbxassetid
+
+    Speed = 300, -- Percentage, 100 = default Rush speed
+
+    DelayTime = 1, -- Time before starting cycles (seconds)
+
+    HeightOffset = 0,
+
+    CanKill = true,
+
+    KillRange = 50,
+
+    BreakLights = false,
+
+    BackwardsMovement = false,
+
+    FlickerLights = {
+
+        true, -- Enabled/Disabled
+
+        2, -- Time (seconds)
+
+    },
+
+    Cycles = {
+
+        Min = 3,
+
+        Max = 3,
+
+        WaitTime = 5,
+
+    },
+
+    CamShake = {
+
+        true, -- Enabled/Disabled
+
+        {30, 30, 0.1, 1}, -- Shake values (don't change if you don't know)
+
+        50, -- Shake start distance (from Entity to you)
+
+    },
+
+    Jumpscare = {
+
+        false, -- Enabled/Disabled
+
+        {
+
+            Image1 = "rbxassetid://11394048190", -- Image1 url
+
+            Image2 = "rbxassetid://11394048190", -- Image2 url
+
+            Shake = true,
+
+            Sound1 = {
+
+                10483790459, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Sound2 = {
+
+                10483837590, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Flashing = {
+
+                true, -- Enabled/Disabled
+
+                Color3.fromRGB(255, 0, 0), -- Color
+
+            },
+
+            Tease = {
+
+                false, -- Enabled/Disabled
+
+                Min = 1,
+
+                Max = 1,
+
+            },
+
+        },
+
+    },
+
+    CustomDialog = {"你死于a-60"}, -- Custom death message
+
+})
+
+-----[[ Advanced ]]-----
+
+entity.Debug.OnEntitySpawned = function(entityTable)
+
+    print("实体已生成:", entityTable.Model)
+
+end
+
+entity.Debug.OnEntityDespawned = function(entityTable)
+
+    print("实体已消失:", entityTable.Model)
+
+end
+
+entity.Debug.OnEntityStartMoving = function(entityTable)
+
+    print("实体开始移动:", entityTable.Model)
+
+end
+
+entity.Debug.OnEntityFinishedRebound = function(entityTable)
+
+    print("实体结束来回:", entityTable.Model)
+
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+
+    print("实体:", entityTable.Model, "已进入房间:", room)
+
+end
+
+entity.Debug.OnLookAtEntity = function(entityTable)
+
+    print("玩家已看向实体:", entityTable.Model)
+
+end
+
+entity.Debug.OnDeath = function(entityTable)
+
+    warn("玩家死亡.")
+
+end
+
+------------------------
+
+-- Run the created entity
+
+Creator.runEntity(entity)
+
+    
+
+    
+
+    end
+
+    
+
+    
+
+    
+
+    })
+
+Tab:AddButton({
+
+	Name = "A-120",	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/MuhXd/DoorSuff/main/DoorsModes/DoorSpeedRun%20Mode'"))()
+
+	end
+
+})
