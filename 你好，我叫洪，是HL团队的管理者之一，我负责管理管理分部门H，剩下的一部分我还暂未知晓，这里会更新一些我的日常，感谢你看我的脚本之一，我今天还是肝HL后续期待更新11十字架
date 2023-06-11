@@ -2,19 +2,45 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "HL［DOOR］", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local plrs = game:GetService("Players")
+local Tab = Window:MakeTab({
 
-local plr = plrs.LocalPlayer
+	Name = "公告",	Icon = "rbxassetid://4483345998",
 
-local TeleportService = game:GetService('TeleportService')
+	PremiumOnly = false
 
-local Gui = Instance.new("ScreenGui")
+})
 
-local Message = game:GetService("StarterGui")
+local Section = Tab:AddSection({
 
-local TweenService = game:GetService('TweenService')
+	Name = "更新内容"
 
-local CoreGui = game:GetService('CoreGui')
+})
+
+about:AddParagraph("新的十字架、Eyes十字架")
+
+about:AddParagraph("解决UI变化")
+
+about:AddParagraph("夜视仪解决Bug")
+
+about:AddParagraph("更新刷新实体")
+
+local Section = Tab:AddSection({
+
+	Name = "介绍"
+
+})
+
+about:AddParagraph("本脚本为免费")
+
+about:AddParagraph("禁止倒卖")
+
+about:AddParagraph("制作者:H副团")
+
+about:AddParagraph("帮助:HL")
+
+about:AddParagraph("注入器："..(identifyexecutor and identifyexecutor() or syn and "Synapse X" or "Unknown")
+
+about:AddParagraph("玩家:(Player Name")
 
 local Tab = Window:MakeTab({
 
