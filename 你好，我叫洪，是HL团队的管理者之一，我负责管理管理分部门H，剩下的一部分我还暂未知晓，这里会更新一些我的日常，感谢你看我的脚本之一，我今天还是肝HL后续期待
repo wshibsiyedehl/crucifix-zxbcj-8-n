@@ -790,6 +790,28 @@ Tab:AddButton({
 
 Tab:AddButton({
 
+	Name = "神圣手雷",	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/HolyGrenadeByNerd.lua"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "夜视仪",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua"))()
+
+	end
+
+})
+
+Tab:AddButton({
+
 	Name = "激光枪",
 
 	Callback = function()
