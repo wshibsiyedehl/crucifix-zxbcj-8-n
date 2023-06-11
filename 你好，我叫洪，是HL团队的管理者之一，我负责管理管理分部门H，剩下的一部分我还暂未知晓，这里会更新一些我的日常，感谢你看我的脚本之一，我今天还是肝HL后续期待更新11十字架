@@ -38,9 +38,9 @@ about:AddParagraph("制作者:H副团")
 
 about:AddParagraph("帮助:HL")
 
-about:AddParagraph("注入器："..(identifyexecutor and identifyexecutor() or syn and "Synapse X" or "Unknown")
+about:AddParagraph("基本信息")
 
-about:AddParagraph("玩家:(Player Name")
+about:AddParagraph("QQ:23785118248")
 
 local Tab = Window:MakeTab({
 
