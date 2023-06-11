@@ -1,6 +1,10 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Rayfield/main/source')))()
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "HL"; Text ="正在加载"; Duration = 2; })
 
-local Window = OrionLib:MakeWindow({Name = "HL［DOOR］", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+  wait(5)
+
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+
+local Window = OrionLib:MakeWindow({Name = "HL.DOORS", HidePremium = false, SaveConfig = true,IntroText = "DOORS", ConfigFolder = "HL"})
 
 local Tab = Window:MakeTab({
 
